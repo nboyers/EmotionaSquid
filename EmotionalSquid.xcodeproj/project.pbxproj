@@ -11,7 +11,38 @@
 		DF752C1C279E4962000922C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* ContentView.swift */; };
 		DF752C1E279E4963000922C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C1D279E4963000922C6 /* Assets.xcassets */; };
 		DF752C21279E4963000922C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C20279E4963000922C6 /* Preview Assets.xcassets */; };
+		DF752C2E279E4993000922C6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF752C2D279E4993000922C6 /* WidgetKit.framework */; };
+		DF752C30279E4993000922C6 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF752C2F279E4993000922C6 /* SwiftUI.framework */; };
+		DF752C33279E4993000922C6 /* ESWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C32279E4993000922C6 /* ESWidget.swift */; };
+		DF752C36279E4994000922C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C35279E4994000922C6 /* Assets.xcassets */; };
+		DF752C38279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
+		DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
+		DF752C3C279E4994000922C6 /* ESWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF752C3A279E4994000922C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF752C0E279E4962000922C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF752C2A279E4993000922C6;
+			remoteInfo = ESWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF752C40279E4994000922C6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DF752C3C279E4994000922C6 /* ESWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +50,13 @@
 		DF752C1B279E4962000922C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF752C1D279E4963000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C20279E4963000922C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ESWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF752C2D279E4993000922C6 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DF752C2F279E4993000922C6 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DF752C32279E4993000922C6 /* ESWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESWidget.swift; sourceTree = "<group>"; };
+		DF752C34279E4993000922C6 /* ESWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ESWidget.intentdefinition; sourceTree = "<group>"; };
+		DF752C35279E4994000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF752C37279E4994000922C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +67,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF752C28279E4993000922C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF752C30279E4993000922C6 /* SwiftUI.framework in Frameworks */,
+				DF752C2E279E4993000922C6 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				DF752C18279E4962000922C6 /* EmotionalSquid */,
+				DF752C31279E4993000922C6 /* ESWidget */,
+				DF752C2C279E4993000922C6 /* Frameworks */,
 				DF752C17279E4962000922C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				DF752C16279E4962000922C6 /* EmotionalSquid.app */,
+				DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +117,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DF752C2C279E4993000922C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF752C2D279E4993000922C6 /* WidgetKit.framework */,
+				DF752C2F279E4993000922C6 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF752C31279E4993000922C6 /* ESWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DF752C32279E4993000922C6 /* ESWidget.swift */,
+				DF752C34279E4993000922C6 /* ESWidget.intentdefinition */,
+				DF752C35279E4994000922C6 /* Assets.xcassets */,
+				DF752C37279E4994000922C6 /* Info.plist */,
+			);
+			path = ESWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +147,34 @@
 				DF752C12279E4962000922C6 /* Sources */,
 				DF752C13279E4962000922C6 /* Frameworks */,
 				DF752C14279E4962000922C6 /* Resources */,
+				DF752C40279E4994000922C6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DF752C3B279E4994000922C6 /* PBXTargetDependency */,
 			);
 			name = EmotionalSquid;
 			productName = EmotionalSquid;
 			productReference = DF752C16279E4962000922C6 /* EmotionalSquid.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DF752C2A279E4993000922C6 /* ESWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF752C3D279E4994000922C6 /* Build configuration list for PBXNativeTarget "ESWidgetExtension" */;
+			buildPhases = (
+				DF752C27279E4993000922C6 /* Sources */,
+				DF752C28279E4993000922C6 /* Frameworks */,
+				DF752C29279E4993000922C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ESWidgetExtension;
+			productName = ESWidgetExtension;
+			productReference = DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +187,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					DF752C15279E4962000922C6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					DF752C2A279E4993000922C6 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -116,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				DF752C15279E4962000922C6 /* EmotionalSquid */,
+				DF752C2A279E4993000922C6 /* ESWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +223,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF752C29279E4993000922C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF752C36279E4994000922C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +238,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
 				DF752C1C279E4962000922C6 /* ContentView.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF752C27279E4993000922C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF752C38279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
+				DF752C33279E4993000922C6 /* ESWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF752C3B279E4994000922C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF752C2A279E4993000922C6 /* ESWidgetExtension */;
+			targetProxy = DF752C3A279E4994000922C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DF752C22279E4963000922C6 /* Debug */ = {
@@ -264,6 +383,7 @@
 		DF752C25279E4963000922C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,6 +413,7 @@
 		DF752C26279E4963000922C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +440,60 @@
 			};
 			name = Release;
 		};
+		DF752C3E279E4994000922C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCL982F3T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ESWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ESWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobosoftware.EmotionalSquid.ESWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF752C3F279E4994000922C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCL982F3T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ESWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ESWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nobosoftware.EmotionalSquid.ESWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -336,6 +511,15 @@
 			buildConfigurations = (
 				DF752C25279E4963000922C6 /* Debug */,
 				DF752C26279E4963000922C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF752C3D279E4994000922C6 /* Build configuration list for PBXNativeTarget "ESWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF752C3E279E4994000922C6 /* Debug */,
+				DF752C3F279E4994000922C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
