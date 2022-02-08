@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
-		DF752C1C279E4962000922C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* ContentView.swift */; };
+		DF752C1C279E4962000922C6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* OnboardingView.swift */; };
 		DF752C1E279E4963000922C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C1D279E4963000922C6 /* Assets.xcassets */; };
 		DF752C21279E4963000922C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C20279E4963000922C6 /* Preview Assets.xcassets */; };
 		DF752C2E279E4993000922C6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF752C2D279E4993000922C6 /* WidgetKit.framework */; };
@@ -18,6 +18,7 @@
 		DF752C38279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
 		DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
 		DF752C3C279E4994000922C6 /* ESWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,7 @@
 /* Begin PBXFileReference section */
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalSquidApp.swift; sourceTree = "<group>"; };
-		DF752C1B279E4962000922C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF752C1B279E4962000922C6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DF752C1D279E4963000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C20279E4963000922C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ESWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +58,7 @@
 		DF752C34279E4993000922C6 /* ESWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ESWidget.intentdefinition; sourceTree = "<group>"; };
 		DF752C35279E4994000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C37279E4994000922C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,8 @@
 		DF752C18279E4962000922C6 /* EmotionalSquid */ = {
 			isa = PBXGroup;
 			children = (
-				DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */,
-				DF752C1B279E4962000922C6 /* ContentView.swift */,
-				DF752C1D279E4963000922C6 /* Assets.xcassets */,
+				DFAC5A1B27B1E8580019A1B8 /* Views */,
+				DFAC5A1C27B1E8640019A1B8 /* Supporting Assets */,
 				DF752C1F279E4963000922C6 /* Preview Content */,
 			);
 			path = EmotionalSquid;
@@ -135,6 +136,24 @@
 				DF752C37279E4994000922C6 /* Info.plist */,
 			);
 			path = ESWidget;
+			sourceTree = "<group>";
+		};
+		DFAC5A1B27B1E8580019A1B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DF752C1B279E4962000922C6 /* OnboardingView.swift */,
+				DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFAC5A1C27B1E8640019A1B8 /* Supporting Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */,
+				DF752C1D279E4963000922C6 /* Assets.xcassets */,
+			);
+			path = "Supporting Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
-				DF752C1C279E4962000922C6 /* ContentView.swift in Sources */,
+				DF752C1C279E4962000922C6 /* OnboardingView.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
+				DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
