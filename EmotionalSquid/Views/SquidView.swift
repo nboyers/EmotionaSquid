@@ -10,18 +10,28 @@ import SwiftUI
 struct SquidView: View {
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: "person.3.sequence.fill")
-                    .resizable()
-                    .frame(width: 75, height: 50)
-                    .foregroundColor(Color.secondary)
-                    .padding(.horizontal, 20)
+            HStack(alignment: .center) {
+                ZStack {
+                    Circle()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.secondary)
+                    Image(systemName: "person.2.fill")
+                        .resizable()
+                        .frame(width: 25, height: 20)
+                        .foregroundColor(Color.white)
+                        .padding(.horizontal, 20)
+                }
                 Spacer()
-                Image(systemName: "person.crop.circle.fill")
-                    .resizable()
-                    .frame(width: 75, height: 75)
-                    .foregroundColor(Color.secondary)
-                    .padding(.horizontal, 20)
+                ZStack {
+                    Circle()
+                        .frame(width: 40, height: 40)
+                        .foregroundColor(Color.secondary)
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(Color.white)
+                        .padding(.horizontal, 20)
+                }
                 
             }
             Spacer()

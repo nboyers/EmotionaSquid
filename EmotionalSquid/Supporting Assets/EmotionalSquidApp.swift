@@ -11,7 +11,7 @@ import SwiftUI
 struct EmotionalSquidApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            OnBoardingView()
         }
     }
 }

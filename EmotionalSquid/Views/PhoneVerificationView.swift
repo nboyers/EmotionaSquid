@@ -1,5 +1,5 @@
 //
-//  OnBoardingView.swift
+//  PhoneVerificationView.swift
 //  EmotionalSquid
 //
 //  Created by Noah Boyers on 2/9/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct OnBoardingView: View {
+struct PhoneVerificationView: View {
     @State private var phoneNumber: String = ""
     
     var body: some View {
@@ -18,7 +18,7 @@ struct OnBoardingView: View {
                 .font(.title)
                 .fontWeight(.heavy)
            
-            TextField("Enter phone number", text: $phoneNumber)
+            TextField("Phone number", text: $phoneNumber)
                 .keyboardType(.phonePad)
                 .onReceive(Just(phoneNumber)) { newValue in
                     let filtered = newValue.filter { "0123456789".contains($0) }
@@ -32,19 +32,20 @@ struct OnBoardingView: View {
                                .stroke(Color.black, lineWidth: 5)
                        )
                        .padding()
-            Spacer()
-            Spacer()
-            Text("By tapping continue you \n accept our TOS and privacy policy")
-                .fontWeight(.ultraLight)
+            Text("You should recieve a text\n mesage with your code.")
+                .font(.subheadline)
+                .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-                .padding()
+            
+            Spacer()
+            Spacer()
             Button(action: {
-                print("Delete tapped!")
+                print("FIXME")
             }) {
                 HStack {
-                    Image(systemName: "person.fill")
-                        .font(.title)
-                    Text("Sign Up")
+//                    Image(systemName: "person.fill")
+//                        .font(.title)
+                    Text("Continue :D")
                         .fontWeight(.semibold)
                         .font(.title)
                 }
@@ -61,8 +62,9 @@ struct OnBoardingView: View {
     }
 }
 
-struct OnBoardingView_Previews: PreviewProvider {
+
+struct PhoneVerificationView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView()
+        PhoneVerificationView()
     }
 }
