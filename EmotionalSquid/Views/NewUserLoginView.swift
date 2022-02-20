@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct NewUserLoginView: View {
-    @State private var isShowingPhoneView = false
+    @State private var willMoveToNextScreen = false
     var body: some View {
-        NavigationView {
+        GeometryReader { geo in
             VStack {
                 Spacer()
                 Image(systemName: "circle.fill")
@@ -21,10 +21,9 @@ struct NewUserLoginView: View {
                 Spacer()
                 
                 Text("FIX ME AT SOME POINT").padding()
-                //FIXME: This is very broken, has two back buttons when it should only be one 
-                NavigationLink(destination: OnBoardingView(), isActive: $isShowingPhoneView) { EmptyView() }
+
                 Button(action: {
-                    self.isShowingPhoneView = true
+                    self.willMoveToNextScreen = true
                 }) {
                     HStack {
                         Text("Set up account")
@@ -42,12 +41,9 @@ struct NewUserLoginView: View {
                     .padding(.horizontal, 20)
                 }
                 Spacer()
-                    .frame(height: 20)
-                
-            }.navigationBarBackButtonHidden(true)
-                .navigationBarHidden(true)
-        }.navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
+                    .frame(height: geo.size.height  / 10)
+            }.navigate(to: OnBoardingView(), when: $willMoveToNextScreen)
+        }
     }
 }
 
