@@ -6,55 +6,58 @@
 //
 
 import SwiftUI
-import Combine
+import iPhoneNumberField
 
 struct OnBoardingView: View {
     @State private var phoneNumber: String = ""
+    @State var isEditing: Bool = false
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
     var body: some View {
+        
         GeometryReader { geo in
             VStack(alignment: .center) {
                 HStack {
-                Button(action: {
-                    self.willMoveBack = true
-                }) {
-                   
+                    Button(action: {
+                        self.willMoveBack = true
+                    }) {
+                        
                         Image(systemName: "arrow.left")
                             .font(.title)
-                }
-                .frame(maxWidth: 10, maxHeight: 10)
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.gray)
-                .cornerRadius(40)
-                .padding(.horizontal, 20)
+                    }
+                    .frame(maxWidth: 10, maxHeight: 10)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(40)
+                    .padding(.horizontal, 20)
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
+                
                 Spacer()
                 Text("What's your number?")
                     .font(.title)
                     .fontWeight(.heavy)
                 
-                TextField("Enter phone number", text: $phoneNumber)
-                    .keyboardType(.phonePad)
-                    .onReceive(Just(phoneNumber)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.phoneNumber = filtered
-                        }
-                    }
+                iPhoneNumberField("(000) 000-0000", text: $phoneNumber, isEditing: $isEditing)
+                    .flagHidden(false)
+                    .flagSelectable(true)
+                    .font(UIFont(size: 30, weight: .light, design: .monospaced))
+                    .maximumDigits(10)
+                    .foregroundColor(Color.pink)
+                    .clearButtonMode(.whileEditing)
+                    .onClear { _ in isEditing.toggle() }
+                    .accentColor(Color.orange)
                     .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color.black, lineWidth: 5)
-                    )
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .shadow(color: isEditing ? .secondary : .white, radius: 10)
                     .padding()
                 Spacer()
                 Spacer()
                 Text("By tapping Continue, you are accept our TOS and Privacy Policy")
-                    .fontWeight(.ultraLight)
+                    .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .padding()
                 
@@ -80,6 +83,7 @@ struct OnBoardingView: View {
                     .frame(height: geo.size.height / 10)
                 
             }
+            .background(Color.teal)
             .navigate(to: PhoneVerificationView(), when: $willMoveToNextScreen)
             .navigate(to: NewUserLoginView(), when: $willMoveBack)
         }

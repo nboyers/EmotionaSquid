@@ -8,46 +8,56 @@
 import SwiftUI
 
 struct SquidView: View {
-    
-//    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @State private var willViewSocialView = false
+    @State private var willMoveBack = false
     var body: some View {
-        NavigationView {
+        GeometryReader { geo in
             VStack {
                 HStack(alignment: .center) {
-                    ZStack {
-                        Circle()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color.secondary)
-                        Image(systemName: "person.2.fill")
-                            .resizable()
-                            .frame(width: 25, height: 20)
-                            .foregroundColor(Color.white)
-                            .padding(.horizontal, 20)
-                    }
-                    Spacer()
-                    ZStack {
-                        Circle()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color.secondary)
-                        Image(systemName: "person.circle")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(Color.white)
-                            .padding(.horizontal, 20)
-                    }
                     
+                        Button(action: {
+                            self.willViewSocialView = true
+                        }) {
+                            Image(systemName: "person.2.fill")
+                        }
+                        .frame(maxWidth: 10, maxHeight: 10)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.gray)
+                        .cornerRadius(40)
+                       
+                    Spacer().frame(width: geo.size.width * 0.6)
+                    
+                    Button(action: {
+                        
+                        //self.willViewSocialView = true
+                    }) {
+                        Image(systemName: "person.fill")
+                    }
+                    .frame(maxWidth: 10, maxHeight: 10)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(40)
+                   
                 }
                 
                 Spacer()
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(0..<10) {
-                            Text("Squid \($0)")
-                                .foregroundColor(.white)
-                                .font(.largeTitle)
-                                .frame(width: 200, height: 200)
-                                .background(Color.red)
+                        ForEach(0..<10) {_ in
+                            Button(action: {
+                               //FIXME: Make this send to other user
+                            }) {
+                                Image(systemName: "airpods.gen3")
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                            .frame(width: 200, height: 200)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.gray)
+                            .cornerRadius(100)
                         }
                     }
                 }
@@ -81,7 +91,8 @@ struct SquidView: View {
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-        }
+        }.navigate(to: FriendsView(), when: $willViewSocialView)
+        
     }
 }
 

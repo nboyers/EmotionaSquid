@@ -42,7 +42,10 @@ struct NewUserLoginView: View {
                 }
                 Spacer()
                     .frame(height: geo.size.height  / 10)
-            }.navigate(to: OnBoardingView(), when: $willMoveToNextScreen)
+            }
+            .background(Color.teal)
+            .navigate(to: OnBoardingView(), when: $willMoveToNextScreen)
+                
         }
     }
 }

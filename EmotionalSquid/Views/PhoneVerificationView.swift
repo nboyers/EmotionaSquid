@@ -46,12 +46,12 @@ struct PhoneVerificationView: View {
                             self.phoneNumber = filtered
                         }
                     }
+                    .accentColor(Color.orange)
                     .padding()
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color.black, lineWidth: 5)
-                    )
+                    .background(Color.white)
+                    .cornerRadius(10)
                     .padding()
+                
                 Text("You should have recieved\n a text with your code.")
                     .font(.subheadline)
                     .fontWeight(.bold)
@@ -84,6 +84,7 @@ struct PhoneVerificationView: View {
                 
             }
         }
+        .background(Color.teal)
         .navigate(to: SquidView(), when: $willMoveToNextScreen)
         .navigate(to: OnBoardingView(), when: $willMoveBack)
     }

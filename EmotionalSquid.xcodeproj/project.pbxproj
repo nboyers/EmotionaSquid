@@ -14,6 +14,8 @@
 		DF18449B27B4577000AD07C5 /* PhoneVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */; };
 		DF18449D27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
 		DF18449E27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
+		DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E352527C2FC3F00763FFB /* SquidModel.swift */; };
+		DF1E352927C2FE2800763FFB /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = DF1E352827C2FE2800763FFB /* iPhoneNumberField */; };
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
 		DF752C1C279E4962000922C6 /* NewUserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* NewUserLoginView.swift */; };
 		DF752C1E279E4963000922C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C1D279E4963000922C6 /* Assets.xcassets */; };
@@ -64,6 +66,7 @@
 		DF18449727B44F8E00AD07C5 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationView.swift; sourceTree = "<group>"; };
 		DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF1E352527C2FC3F00763FFB /* SquidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidModel.swift; sourceTree = "<group>"; };
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalSquidApp.swift; sourceTree = "<group>"; };
 		DF752C1B279E4962000922C6 /* NewUserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserLoginView.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			files = (
 				DF18449627B44E8900AD07C5 /* StoreKit.framework in Frameworks */,
 				A2BA660A30678FA554B6523F /* Pods_EmotionalSquid.framework in Frameworks */,
+				DF1E352927C2FE2800763FFB /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,14 @@
 				DFAEA51227C1B7CE00428834 /* View+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF1E352427C2FC3100763FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF1E352527C2FC3F00763FFB /* SquidModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DF752C0D279E4962000922C6 = {
@@ -137,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				DF18449927B4547D00AD07C5 /* Extensions */,
+				DF1E352427C2FC3100763FFB /* Model */,
 				DFAC5A1B27B1E8580019A1B8 /* Views */,
 				DFAC5A1C27B1E8640019A1B8 /* Supporting Assets */,
 				DF752C1F279E4963000922C6 /* Preview Content */,
@@ -228,6 +241,9 @@
 				DF752C3B279E4994000922C6 /* PBXTargetDependency */,
 			);
 			name = EmotionalSquid;
+			packageProductDependencies = (
+				DF1E352827C2FE2800763FFB /* iPhoneNumberField */,
+			);
 			productName = EmotionalSquid;
 			productReference = DF752C16279E4962000922C6 /* EmotionalSquid.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +293,9 @@
 				Base,
 			);
 			mainGroup = DF752C0D279E4962000922C6;
+			packageReferences = (
+				DF1E352727C2FE2800763FFB /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = DF752C17279E4962000922C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -386,6 +405,7 @@
 				DF18449827B44F8E00AD07C5 /* OnBoardingView.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
 				DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */,
+				DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +694,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF1E352727C2FE2800763FFB /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF1E352827C2FE2800763FFB /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF1E352727C2FE2800763FFB /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF752C0E279E4962000922C6 /* Project object */;
 }
