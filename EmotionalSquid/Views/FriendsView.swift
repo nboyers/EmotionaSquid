@@ -56,7 +56,7 @@ struct FriendsView: View {
     }
 }
 
-struct SocialView_Previews: PreviewProvider {
+struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
         FriendsView()
     }

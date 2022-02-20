@@ -26,7 +26,7 @@
 		DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
 		DF752C3C279E4994000922C6 /* ESWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */; };
-		DFAC5A2027B213D80019A1B8 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1F27B213D80019A1B8 /* SocialView.swift */; };
+		DFAC5A2027B213D80019A1B8 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */; };
 		DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAEA51227C1B7CE00428834 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 		DF752C35279E4994000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C37279E4994000922C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; };
-		DFAC5A1F27B213D80019A1B8 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
+		DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		DFAEA51227C1B7CE00428834 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		F725E38FDC7F007C027F913C /* Pods-ESWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-ESWidgetExtension/Pods-ESWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +182,7 @@
 				DF18449727B44F8E00AD07C5 /* OnBoardingView.swift */,
 				DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */,
 				DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */,
-				DFAC5A1F27B213D80019A1B8 /* SocialView.swift */,
+				DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				DF18449B27B4577000AD07C5 /* PhoneVerificationView.swift in Sources */,
 				DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
 				DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */,
-				DFAC5A2027B213D80019A1B8 /* SocialView.swift in Sources */,
+				DFAC5A2027B213D80019A1B8 /* FriendsView.swift in Sources */,
 				DF752C1C279E4962000922C6 /* NewUserLoginView.swift in Sources */,
 				DF18449827B44F8E00AD07C5 /* OnBoardingView.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
