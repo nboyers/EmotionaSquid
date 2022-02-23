@@ -12,24 +12,25 @@ struct PhoneVerificationView: View {
     @State private var phoneNumber: String = ""
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
+    @State private var validSMSCode = false
     var body: some View {
-       
+        
         GeometryReader { geo in
             VStack(alignment: .center) {
                 HStack {
-                Button(action: {
-                    self.willMoveBack = true
-                }) {
-                   
-                        Image(systemName: "arrow.left")
-                            .font(.title)
-                }
-                .frame(maxWidth: 10, maxHeight: 10)
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.gray)
-                .cornerRadius(40)
-                .padding(.horizontal, 20)
+                    Button(action: {
+                        self.willMoveBack = true
+                    }) {
+                        Image("backArrow")
+                            .resizable()
+                            .frame(width: 60, height: 40, alignment: .center)
+                    }
+                    .frame(maxWidth: 10, maxHeight: 10)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(40)
+                    .padding(.horizontal, 20)
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
@@ -62,7 +63,9 @@ struct PhoneVerificationView: View {
                 //FIXME: This needs authentication & Disabled until user puts in correct SMS code
                 
                 Button(action: {
-                    self.willMoveToNextScreen = true
+                    if validSMSCode {
+                        self.willMoveToNextScreen = true
+                    }
                 }) {
                     HStack {
                         Text("Continue")
@@ -76,7 +79,7 @@ struct PhoneVerificationView: View {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
                 .foregroundColor(.white)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.teal,Color.accentColor]), startPoint: .top, endPoint: .bottom))
+                .background(Color.accentRed)
                 .cornerRadius(40)
                 .padding(.horizontal, 20)
                 Spacer()
@@ -84,7 +87,7 @@ struct PhoneVerificationView: View {
                 
             }
         }
-        .background(Color.teal)
+        .background(Color.backgroundGreen)
         .navigate(to: SquidView(), when: $willMoveToNextScreen)
         .navigate(to: OnBoardingView(), when: $willMoveBack)
     }

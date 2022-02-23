@@ -15,17 +15,17 @@ struct SquidView: View {
             VStack {
                 HStack(alignment: .center) {
                     
-                        Button(action: {
-                            self.willViewSocialView = true
-                        }) {
-                            Image(systemName: "person.2.fill")
-                        }
-                        .frame(maxWidth: 10, maxHeight: 10)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.gray)
-                        .cornerRadius(40)
-                       
+                    Button(action: {
+                        self.willViewSocialView = true
+                    }) {
+                        Image(systemName: "person.2.fill")
+                    }
+                    .frame(maxWidth: 10, maxHeight: 10)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(40)
+                    
                     Spacer().frame(width: geo.size.width * 0.6)
                     
                     Button(action: {
@@ -39,7 +39,7 @@ struct SquidView: View {
                     .foregroundColor(.white)
                     .background(Color.gray)
                     .cornerRadius(40)
-                   
+                    
                 }
                 
                 Spacer()
@@ -47,7 +47,7 @@ struct SquidView: View {
                     HStack(spacing: 20) {
                         ForEach(0..<10) {_ in
                             Button(action: {
-                               //FIXME: Make this send to other user
+                                //FIXME: Make this send to other user
                             }) {
                                 Image(systemName: "airpods.gen3")
                                     .resizable()

@@ -20,17 +20,18 @@ struct OnBoardingView: View {
                 HStack {
                     Button(action: {
                         self.willMoveBack = true
-                    }) {
-                        
-                        Image(systemName: "arrow.left")
-                            .font(.title)
+                    }) {     
+                        Image("backArrow")
+                            .resizable()
+                            .frame(width: 60, height: 40, alignment: .center)
                     }
-                    .frame(maxWidth: 10, maxHeight: 10)
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.gray)
-                    .cornerRadius(40)
-                    .padding(.horizontal, 20)
+                        .frame(maxWidth: 10, maxHeight: 10)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.gray)
+                        .cornerRadius(40)
+                        .padding(.horizontal, 20)
+
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
@@ -45,7 +46,7 @@ struct OnBoardingView: View {
                     .flagSelectable(true)
                     .font(UIFont(size: 30, weight: .light, design: .monospaced))
                     .maximumDigits(10)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(Color.red)
                     .clearButtonMode(.whileEditing)
                     .onClear { _ in isEditing.toggle() }
                     .accentColor(Color.orange)
@@ -62,7 +63,9 @@ struct OnBoardingView: View {
                     .padding()
                 
                 Button(action: {
-                    self.willMoveToNextScreen = true
+                    if !phoneNumber.isEmpty {
+                        self.willMoveToNextScreen = true
+                    }
                 }) {
                     HStack {
                         Text("Continue")
@@ -76,14 +79,14 @@ struct OnBoardingView: View {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
                 .foregroundColor(.white)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.teal,Color.accentColor]), startPoint: .top, endPoint: .bottom))
+                .background(Color.accentRed)
                 .cornerRadius(40)
                 .padding(.horizontal, 20)
                 Spacer()
                     .frame(height: geo.size.height / 10)
                 
             }
-            .background(Color.teal)
+            .background(Color.backgroundGreen)
             .navigate(to: PhoneVerificationView(), when: $willMoveToNextScreen)
             .navigate(to: NewUserLoginView(), when: $willMoveBack)
         }
