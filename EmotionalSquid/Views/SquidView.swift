@@ -16,7 +16,10 @@ struct SquidView: View {
                 HStack(alignment: .center) {
                     
                     Button(action: {
-                        self.willViewSocialView = true
+                        withAnimation {
+                            self.willViewSocialView = true
+                        }
+                        
                     }) {
                         Image(systemName: "person.2.fill")
                     }
@@ -29,8 +32,7 @@ struct SquidView: View {
                     Spacer().frame(width: geo.size.width * 0.6)
                     
                     Button(action: {
-                        
-                        //self.willViewSocialView = true
+                        self.willViewSocialView.toggle()
                     }) {
                         Image(systemName: "person.fill")
                     }
@@ -40,6 +42,10 @@ struct SquidView: View {
                     .background(Color.gray)
                     .cornerRadius(40)
                     
+                }
+                if willViewSocialView {
+                    FriendsView()
+                        .transition(.move(edge: .bottom))
                 }
                 
                 Spacer()
