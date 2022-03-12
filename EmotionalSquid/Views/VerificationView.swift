@@ -7,8 +7,9 @@
 
 import SwiftUI
 import Combine
+import FirebaseCore
 
-struct PhoneVerificationView: View {
+struct VerificationView: View {
     @State private var phoneNumber: String = ""
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
@@ -89,13 +90,13 @@ struct PhoneVerificationView: View {
         }
         .background(Color.backgroundGreen)
         .navigate(to: SquidView(), when: $willMoveToNextScreen)
-        .navigate(to: OnBoardingView(), when: $willMoveBack)
+        .navigate(to: PhoneAuthView(), when: $willMoveBack)
     }
 }
 
 
 struct PhoneVerificationView_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneVerificationView()
+        VerificationView()
     }
 }

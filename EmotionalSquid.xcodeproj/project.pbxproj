@@ -12,8 +12,8 @@
 		DF082F8427C5C3F800ACBFD8 /* BoldLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */; };
 		DF082F8527C5C3F800ACBFD8 /* BoldLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */; };
 		DF18449627B44E8900AD07C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF18449527B44E8900AD07C5 /* StoreKit.framework */; };
-		DF18449827B44F8E00AD07C5 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449727B44F8E00AD07C5 /* OnBoardingView.swift */; };
-		DF18449B27B4577000AD07C5 /* PhoneVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */; };
+		DF18449827B44F8E00AD07C5 /* PhoneAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449727B44F8E00AD07C5 /* PhoneAuthView.swift */; };
+		DF18449B27B4577000AD07C5 /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449A27B4577000AD07C5 /* VerificationView.swift */; };
 		DF18449D27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
 		DF18449E27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
 		DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E352527C2FC3F00763FFB /* SquidModel.swift */; };
@@ -21,7 +21,7 @@
 		DF61DB0727C9450C003C950E /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61DB0627C9450C003C950E /* StoreView.swift */; };
 		DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */; };
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
-		DF752C1C279E4962000922C6 /* NewUserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* NewUserLoginView.swift */; };
+		DF752C1C279E4962000922C6 /* NewUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* NewUserView.swift */; };
 		DF752C1E279E4963000922C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C1D279E4963000922C6 /* Assets.xcassets */; };
 		DF752C21279E4963000922C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF752C20279E4963000922C6 /* Preview Assets.xcassets */; };
 		DF752C2E279E4993000922C6 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF752C2D279E4993000922C6 /* WidgetKit.framework */; };
@@ -31,6 +31,7 @@
 		DF752C38279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
 		DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = DF752C34279E4993000922C6 /* ESWidget.intentdefinition */; };
 		DF752C3C279E4994000922C6 /* ESWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DF8DBA9227DD370B006AAF51 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8DBA9127DD370B006AAF51 /* AuthManager.swift */; };
 		DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */; };
 		DFAC5A2027B213D80019A1B8 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */; };
 		DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAEA51227C1B7CE00428834 /* View+Extension.swift */; };
@@ -68,15 +69,15 @@
 		D34894CE7D9560C9D689073D /* Pods-EmotionalSquid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalSquid.debug.xcconfig"; path = "Target Support Files/Pods-EmotionalSquid/Pods-EmotionalSquid.debug.xcconfig"; sourceTree = "<group>"; };
 		DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BoldLove.ttf; path = "../../../../../../Downloads/bold-love/BoldLove.ttf"; sourceTree = "<group>"; };
 		DF18449527B44E8900AD07C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		DF18449727B44F8E00AD07C5 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
-		DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerificationView.swift; sourceTree = "<group>"; };
+		DF18449727B44F8E00AD07C5 /* PhoneAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthView.swift; sourceTree = "<group>"; };
+		DF18449A27B4577000AD07C5 /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
 		DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF1E352527C2FC3F00763FFB /* SquidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidModel.swift; sourceTree = "<group>"; };
 		DF61DB0627C9450C003C950E /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalSquidApp.swift; sourceTree = "<group>"; };
-		DF752C1B279E4962000922C6 /* NewUserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserLoginView.swift; sourceTree = "<group>"; };
+		DF752C1B279E4962000922C6 /* NewUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserView.swift; sourceTree = "<group>"; };
 		DF752C1D279E4963000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C20279E4963000922C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF752C2B279E4993000922C6 /* ESWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ESWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +87,11 @@
 		DF752C34279E4993000922C6 /* ESWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ESWidget.intentdefinition; sourceTree = "<group>"; };
 		DF752C35279E4994000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C37279E4994000922C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8DBA9127DD370B006AAF51 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; };
 		DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		DFAEA51227C1B7CE00428834 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		DFEE1A8F27DD41EF0040A1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F725E38FDC7F007C027F913C /* Pods-ESWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-ESWidgetExtension/Pods-ESWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,9 +167,11 @@
 		DF752C18279E4962000922C6 /* EmotionalSquid */ = {
 			isa = PBXGroup;
 			children = (
+				DFEE1A8F27DD41EF0040A1D4 /* Info.plist */,
 				DF082F8227C5C3B900ACBFD8 /* Fonts */,
 				DF18449927B4547D00AD07C5 /* Extensions */,
 				DF1E352427C2FC3100763FFB /* Model */,
+				DF8DBA9027DD33C9006AAF51 /* View Models */,
 				DFAC5A1B27B1E8580019A1B8 /* Views */,
 				DFAC5A1C27B1E8640019A1B8 /* Supporting Assets */,
 				DF752C1F279E4963000922C6 /* Preview Content */,
@@ -205,12 +210,20 @@
 			path = ESWidget;
 			sourceTree = "<group>";
 		};
+		DF8DBA9027DD33C9006AAF51 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF8DBA9127DD370B006AAF51 /* AuthManager.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		DFAC5A1B27B1E8580019A1B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DF752C1B279E4962000922C6 /* NewUserLoginView.swift */,
-				DF18449727B44F8E00AD07C5 /* OnBoardingView.swift */,
-				DF18449A27B4577000AD07C5 /* PhoneVerificationView.swift */,
+				DF752C1B279E4962000922C6 /* NewUserView.swift */,
+				DF18449727B44F8E00AD07C5 /* PhoneAuthView.swift */,
+				DF18449A27B4577000AD07C5 /* VerificationView.swift */,
 				DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */,
 				DFAC5A1F27B213D80019A1B8 /* FriendsView.swift */,
 				DF61DB0627C9450C003C950E /* StoreView.swift */,
@@ -417,13 +430,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF18449B27B4577000AD07C5 /* PhoneVerificationView.swift in Sources */,
+				DF18449B27B4577000AD07C5 /* VerificationView.swift in Sources */,
+				DF8DBA9227DD370B006AAF51 /* AuthManager.swift in Sources */,
 				DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
 				DF61DB0727C9450C003C950E /* StoreView.swift in Sources */,
 				DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */,
 				DFAC5A2027B213D80019A1B8 /* FriendsView.swift in Sources */,
-				DF752C1C279E4962000922C6 /* NewUserLoginView.swift in Sources */,
-				DF18449827B44F8E00AD07C5 /* OnBoardingView.swift in Sources */,
+				DF752C1C279E4962000922C6 /* NewUserView.swift in Sources */,
+				DF18449827B44F8E00AD07C5 /* PhoneAuthView.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
 				DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */,
 				DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */,
@@ -580,6 +594,7 @@
 				DEVELOPMENT_TEAM = JCL982F3T2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionalSquid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -590,6 +605,39 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobosoftware.EmotionalSquid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -611,6 +659,7 @@
 				DEVELOPMENT_TEAM = JCL982F3T2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmotionalSquid/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -621,6 +670,39 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nobosoftware.EmotionalSquid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

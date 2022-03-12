@@ -8,7 +8,7 @@
 import SwiftUI
 import iPhoneNumberField
 
-struct OnBoardingView: View {
+struct PhoneAuthView: View {
     @State private var phoneNumber: String = ""
     @State var isEditing: Bool = false
     @State private var willMoveToNextScreen = false
@@ -20,18 +20,18 @@ struct OnBoardingView: View {
                 HStack {
                     Button(action: {
                         self.willMoveBack = true
-                    }) {     
+                    }) {
                         Image("backArrow")
                             .resizable()
                             .frame(width: 60, height: 40, alignment: .center)
                     }
-                        .frame(maxWidth: 10, maxHeight: 10)
-                        .padding()
-                        .foregroundColor(.white)
-                        .background(Color.gray)
-                        .cornerRadius(40)
-                        .padding(.horizontal, 20)
-
+                    .frame(maxWidth: 10, maxHeight: 10)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.gray)
+                    .cornerRadius(40)
+                    .padding(.horizontal, 20)
+                    
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
@@ -63,8 +63,12 @@ struct OnBoardingView: View {
                     .padding()
                 
                 Button(action: {
-                    if !phoneNumber.isEmpty {
-                        self.willMoveToNextScreen = true
+                    print(phoneNumber)
+                    AuthManager.shared.startAuth(phoneNumber: phoneNumber) { success in
+                        guard success else { return }
+                        if success {
+                            self.willMoveToNextScreen = true
+                        }
                     }
                 }) {
                     HStack {
@@ -87,8 +91,8 @@ struct OnBoardingView: View {
                 
             }
             .background(Color.backgroundGreen)
-            .navigate(to: PhoneVerificationView(), when: $willMoveToNextScreen)
-            .navigate(to: NewUserLoginView(), when: $willMoveBack)
+            .navigate(to: VerificationView(), when: $willMoveToNextScreen)
+            .navigate(to: NewUserView(), when: $willMoveBack)
         }
     }
 }
@@ -96,6 +100,6 @@ struct OnBoardingView: View {
 
 struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingView()
+        PhoneAuthView()
     }
 }
