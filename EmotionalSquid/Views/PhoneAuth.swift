@@ -1,19 +1,20 @@
 //
-//  PhoneVerificationView.swift
+//  OnBoardingView.swift
 //  EmotionalSquid
 //
 //  Created by Noah Boyers on 2/9/22.
 //
 
 import SwiftUI
-import Combine
-import FirebaseCore
+import iPhoneNumberField
 
-struct VerificationView: View {
-    @State private var phoneNumber: String = ""
+struct PhoneAuth: View {
+    @State var phoneNumber: String = ""
+    @State var isEditing: Bool = false
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
-    @State private var validSMSCode = false
+    let phoneCharacters: Set<Character> = [" ", "(", ")","-"]
+    
     var body: some View {
         
         GeometryReader { geo in
@@ -32,40 +33,45 @@ struct VerificationView: View {
                     .background(Color.gray)
                     .cornerRadius(40)
                     .padding(.horizontal, 20)
+                    
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
+                
                 Spacer()
-                Text("Verify your number")
+                Text("What's your number?")
                     .font(.title)
                     .fontWeight(.heavy)
                 
-                TextField("6-Digit Code", text: $phoneNumber)
-                    .keyboardType(.phonePad)
-                    .onReceive(Just(phoneNumber)) { newValue in
-                        let filtered = newValue.filter { "0123456789".contains($0) }
-                        if filtered != newValue {
-                            self.phoneNumber = filtered
-                        }
-                    }
+                iPhoneNumberField("(000) 000-0000", text: $phoneNumber, isEditing: $isEditing)
+                    .flagHidden(false)
+                    .flagSelectable(true)
+                    .font(UIFont(size: 30, weight: .light, design: .monospaced))
+                    .maximumDigits(10)
+                    .foregroundColor(Color.pink)
+                    .clearButtonMode(.whileEditing)
+                    .onClear { _ in isEditing.toggle() }
                     .accentColor(Color.orange)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
+                    .shadow(color: isEditing ? Color("lightGray") : .white, radius: 10)
+                    .padding()
+                Spacer()
+                    .frame(height:geo.size.height / 4)
+                Text("By tapping Continue, you are accept our TOS and Privacy Policy")
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.center)
                     .padding()
                 
-                Text("You should have recieved\n a text with your code.")
-                    .font(.subheadline)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                
-                Spacer()
-                Spacer()
-                //FIXME: This needs authentication & Disabled until user puts in correct SMS code
-                
                 Button(action: {
-                    if validSMSCode {
-                        self.willMoveToNextScreen = true
+                    phoneNumber.removeAll(where: { phoneCharacters.contains($0) })
+                    print(phoneNumber)
+                    AuthManager.shared.startAuth(phoneNumber: phoneNumber) { success in
+                        guard success else { return }
+                        if success {
+                            self.willMoveToNextScreen = true
+                        }
                     }
                 }) {
                     HStack {
@@ -87,16 +93,16 @@ struct VerificationView: View {
                     .frame(height: geo.size.height / 10)
                 
             }
+            .background(Color.backgroundGreen)
+            .navigate(to: Verification(), when: $willMoveToNextScreen)
+            .navigate(to: NewUser(), when: $willMoveBack)
         }
-        .background(Color.backgroundGreen)
-        .navigate(to: SquidView(), when: $willMoveToNextScreen)
-        .navigate(to: PhoneAuthView(), when: $willMoveBack)
     }
 }
 
 
-struct PhoneVerificationView_Previews: PreviewProvider {
+struct OnBoardingView_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationView()
+        PhoneAuth()
     }
 }

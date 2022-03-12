@@ -1,18 +1,19 @@
 //
-//  OnBoardingView.swift
+//  PhoneVerificationView.swift
 //  EmotionalSquid
 //
 //  Created by Noah Boyers on 2/9/22.
 //
 
 import SwiftUI
-import iPhoneNumberField
+import Combine
+import FirebaseCore
 
-struct PhoneAuthView: View {
+struct Verification: View {
     @State private var phoneNumber: String = ""
-    @State var isEditing: Bool = false
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
+    @State private var validSMSCode = false
     var body: some View {
         
         GeometryReader { geo in
@@ -31,44 +32,40 @@ struct PhoneAuthView: View {
                     .background(Color.gray)
                     .cornerRadius(40)
                     .padding(.horizontal, 20)
-                    
                     Spacer()
                         .frame(width:geo.size.width * 0.8)
                 }
-                
                 Spacer()
-                Text("What's your number?")
+                Text("Verify your number")
                     .font(.title)
                     .fontWeight(.heavy)
                 
-                iPhoneNumberField("(000) 000-0000", text: $phoneNumber, isEditing: $isEditing)
-                    .flagHidden(false)
-                    .flagSelectable(true)
-                    .font(UIFont(size: 30, weight: .light, design: .monospaced))
-                    .maximumDigits(10)
-                    .foregroundColor(Color.red)
-                    .clearButtonMode(.whileEditing)
-                    .onClear { _ in isEditing.toggle() }
+                TextField("6-Digit Code", text: $phoneNumber)
+                    .keyboardType(.phonePad)
+                    .onReceive(Just(phoneNumber)) { newValue in
+                        let filtered = newValue.filter { "0123456789".contains($0) }
+                        if filtered != newValue {
+                            self.phoneNumber = filtered
+                        }
+                    }
                     .accentColor(Color.orange)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(10)
-                    .shadow(color: isEditing ? .secondary : .white, radius: 10)
-                    .padding()
-                Spacer()
-                Spacer()
-                Text("By tapping Continue, you are accept our TOS and Privacy Policy")
-                    .fontWeight(.heavy)
-                    .multilineTextAlignment(.center)
                     .padding()
                 
+                Text("You should have recieved\n a text with your code.")
+                    .font(.subheadline)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+                Spacer()
+                //FIXME: This needs authentication & Disabled until user puts in correct SMS code
+                
                 Button(action: {
-                    print(phoneNumber)
-                    AuthManager.shared.startAuth(phoneNumber: phoneNumber) { success in
-                        guard success else { return }
-                        if success {
-                            self.willMoveToNextScreen = true
-                        }
+                    if validSMSCode {
+                        self.willMoveToNextScreen = true
                     }
                 }) {
                     HStack {
@@ -90,16 +87,16 @@ struct PhoneAuthView: View {
                     .frame(height: geo.size.height / 10)
                 
             }
-            .background(Color.backgroundGreen)
-            .navigate(to: VerificationView(), when: $willMoveToNextScreen)
-            .navigate(to: NewUserView(), when: $willMoveBack)
         }
+        .background(Color.backgroundGreen)
+        .navigate(to: SquidView(), when: $willMoveToNextScreen)
+        .navigate(to: PhoneAuth(), when: $willMoveBack)
     }
 }
 
 
-struct OnBoardingView_Previews: PreviewProvider {
+struct PhoneVerificationView_Previews: PreviewProvider {
     static var previews: some View {
-        PhoneAuthView()
+        Verification()
     }
 }

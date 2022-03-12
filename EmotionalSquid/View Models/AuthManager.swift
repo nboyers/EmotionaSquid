@@ -15,6 +15,7 @@ class AuthManager {
     private var verificationID: String?
     
     public func startAuth(phoneNumber: String, completion: @escaping (Bool) -> Void) {
+        
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { [weak self] verificationID, error in
             guard let verificationID = verificationID, error == nil else {
                 completion(false)
@@ -24,6 +25,8 @@ class AuthManager {
             completion(true)
         }
     }
+    
+    
     public func verifyCode(smsCode: String, completion: @escaping (Bool) -> Void) {
         guard let verificationID = verificationID  else {
             completion(false)

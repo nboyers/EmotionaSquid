@@ -16,8 +16,7 @@ struct EmotionalSquidApp: App {
     }
     var body: some Scene {
         WindowGroup {
-                NewUserView()
-        
+                NewUser()
         }
     }
 }

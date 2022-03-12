@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewUserView: View {
+struct NewUser: View {
     @State private var willMoveToNextScreen = false
 
     var body: some View {
@@ -48,7 +48,7 @@ struct NewUserView: View {
                     .frame(height: geo.size.height  / 10)
             }
             .background(Color.backgroundGreen)
-            .navigate(to: PhoneAuthView(), when: $willMoveToNextScreen)
+            .navigate(to: PhoneAuth(), when: $willMoveToNextScreen)
                 
         }
     }
@@ -56,6 +56,6 @@ struct NewUserView: View {
 
 struct NewUserLoginView_Previews: PreviewProvider {
     static var previews: some View {
-        NewUserView()
+        NewUser()
     }
 }

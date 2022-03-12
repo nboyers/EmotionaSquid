@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FriendsView: View {
+struct FriendProfiles: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -58,6 +58,6 @@ struct FriendsView: View {
 
 struct FriendsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView()
+        FriendProfiles()
     }
 }

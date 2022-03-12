@@ -44,7 +44,7 @@ struct SquidView: View {
                     
                 }
                 if willViewSocialView {
-                    FriendsView()
+                    FriendProfiles()
                         .transition(.move(edge: .bottom))
                 }
                 
@@ -97,7 +97,7 @@ struct SquidView: View {
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-        }.navigate(to: FriendsView(), when: $willViewSocialView)
+        }.navigate(to: FriendProfiles(), when: $willViewSocialView)
         
     }
 }
