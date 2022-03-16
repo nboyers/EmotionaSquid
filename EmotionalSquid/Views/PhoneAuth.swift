@@ -14,7 +14,9 @@ struct PhoneAuth: View {
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
     let phoneCharacters: Set<Character> = [" ", "(", ")","-", "+","O","p","t","i","o","n","a","l","n","i"]
-   
+    
+    let TESTNUMBER = "+15555555555"
+    
     var body: some View {
         
         GeometryReader { geo in
@@ -75,10 +77,12 @@ struct PhoneAuth: View {
                     phoneNumber.removeAll(where: { phoneCharacters.contains($0) })
                     self.phoneNumber = "+\(self.phoneNumber)"
                     print(phoneNumber)
-                    AuthManager.shared.startAuth(phoneNumber: phoneNumber) { success in
+                    AuthManager.shared.startAuth(phoneNumber: TESTNUMBER) { success in
                         guard success else { return }
                         if success {
-                            self.willMoveToNextScreen = true
+                            DispatchQueue.main.async {
+                                self.willMoveToNextScreen = true
+                            }
                         }
                     }
                 }) {

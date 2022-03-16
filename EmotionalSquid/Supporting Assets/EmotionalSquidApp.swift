@@ -5,24 +5,11 @@
 //  Created by Noah Boyers on 1/23/22.
 //
 
-import SwiftUI
-import Firebase
-import FirebaseAuth
 
-@main
-struct EmotionalSquidApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
-    var body: some Scene {
-        WindowGroup {
-            NewUser()
-                .onOpenURL { url in
-                    print("Received URL: \(url)")
-                    Auth.auth().canHandle(url) // <- just for information purposes
-                }
-        }
-    }
-}
+import Firebase
+import SwiftUI
+import UIKit
+
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -52,11 +39,25 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
         return false
     }
-    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        for urlContext in URLContexts {
-            let url = urlContext.url
-            Auth.auth().canHandle(url)
+}
+
+
+@main
+struct EmotionalSquidApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    var body: some Scene {
+        WindowGroup {
+            if Auth.auth().currentUser == nil {
+                NewUser()
+//                    .onOpenURL { url in
+//                        print("Received URL: \(url)")
+//                        Auth.auth().canHandle(url) // <- just for information purposes
+//                    }
+            } else {
+                SquidView()
+            }
+            
         }
-        // URL not auth related, developer should handle it.
     }
 }
