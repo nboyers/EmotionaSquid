@@ -13,8 +13,8 @@ struct PhoneAuth: View {
     @State var isEditing: Bool = false
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
-    let phoneCharacters: Set<Character> = [" ", "(", ")","-"]
-    
+    let phoneCharacters: Set<Character> = [" ", "(", ")","-", "+","O","p","t","i","o","n","a","l","n","i"]
+   
     var body: some View {
         
         GeometryReader { geo in
@@ -44,6 +44,13 @@ struct PhoneAuth: View {
                     .fontWeight(.heavy)
                 
                 iPhoneNumberField("(000) 000-0000", text: $phoneNumber, isEditing: $isEditing)
+                    .onNumberChange { phoneNumber in
+                        print(phoneNumber ?? "No Phone number")
+                        let countryCode = phoneNumber?.countryCode
+                        self.phoneNumber = "+\(String(describing: countryCode))\(self.phoneNumber)"
+                    }
+                    .defaultRegion("US")
+                    .prefixHidden(false)
                     .flagHidden(false)
                     .flagSelectable(true)
                     .font(UIFont(size: 30, weight: .light, design: .monospaced))
@@ -66,6 +73,7 @@ struct PhoneAuth: View {
                 
                 Button(action: {
                     phoneNumber.removeAll(where: { phoneCharacters.contains($0) })
+                    self.phoneNumber = "+\(self.phoneNumber)"
                     print(phoneNumber)
                     AuthManager.shared.startAuth(phoneNumber: phoneNumber) { success in
                         guard success else { return }

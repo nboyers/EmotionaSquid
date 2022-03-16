@@ -91,6 +91,7 @@
 		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; };
 		DFAC5A1F27B213D80019A1B8 /* FriendProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfiles.swift; sourceTree = "<group>"; };
 		DFAEA51227C1B7CE00428834 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		DFC1825427E1790B003BF588 /* EmotionalSquid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionalSquid.entitlements; sourceTree = "<group>"; };
 		DFEE1A8F27DD41EF0040A1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F725E38FDC7F007C027F913C /* Pods-ESWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-ESWidgetExtension/Pods-ESWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +168,7 @@
 		DF752C18279E4962000922C6 /* EmotionalSquid */ = {
 			isa = PBXGroup;
 			children = (
+				DFC1825427E1790B003BF588 /* EmotionalSquid.entitlements */,
 				DFEE1A8F27DD41EF0040A1D4 /* Info.plist */,
 				DF082F8227C5C3B900ACBFD8 /* Fonts */,
 				DF18449927B4547D00AD07C5 /* Extensions */,
@@ -588,6 +590,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmotionalSquid/EmotionalSquid.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionalSquid/Preview Content\"";
@@ -653,6 +656,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmotionalSquid/EmotionalSquid.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmotionalSquid/Preview Content\"";
