@@ -10,7 +10,7 @@ import Combine
 import FirebaseCore
 
 struct Verification: View {
-    @State private var phoneNumber: String = ""
+    @State private var textCode: String = ""
     @State private var willMoveToNextScreen = false
     @State private var willMoveBack = false
     @State private var validSMSCode = false
@@ -40,14 +40,16 @@ struct Verification: View {
                     .font(.title)
                     .fontWeight(.heavy)
                 
-                TextField("6-Digit Code", text: $phoneNumber)
+                TextField("6-Digit Code", text: $textCode)
                     .keyboardType(.phonePad)
-                    .onReceive(Just(phoneNumber)) { newValue in
+                    .onReceive(Just(textCode)) { newValue in
                         let filtered = newValue.filter { "0123456789".contains($0) }
                         if filtered != newValue {
-                            self.phoneNumber = filtered
+                            self.textCode = filtered
                         }
+                        print(textCode)
                     }
+                
                     .accentColor(Color.orange)
                     .padding()
                     .background(Color.white)
@@ -64,8 +66,13 @@ struct Verification: View {
                 //FIXME: This needs authentication & Disabled until user puts in correct SMS code
                 
                 Button(action: {
-                    if validSMSCode {
-                        self.willMoveToNextScreen = true
+                    AuthManager.shared.verifyCode(smsCode: textCode) { success in
+                        guard success else { return }
+                        if success {
+                            DispatchQueue.main.async {
+                                self.willMoveToNextScreen = true
+                            }
+                        }
                     }
                 }) {
                     HStack {

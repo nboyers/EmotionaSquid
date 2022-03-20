@@ -18,6 +18,7 @@
 		DF18449E27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
 		DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E352527C2FC3F00763FFB /* SquidModel.swift */; };
 		DF1E352927C2FE2800763FFB /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = DF1E352827C2FE2800763FFB /* iPhoneNumberField */; };
+		DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */; };
 		DF61DB0727C9450C003C950E /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61DB0627C9450C003C950E /* Shopping.swift */; };
 		DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */; };
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
@@ -73,6 +74,7 @@
 		DF18449A27B4577000AD07C5 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF1E352527C2FC3F00763FFB /* SquidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidModel.swift; sourceTree = "<group>"; };
+		DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		DF61DB0627C9450C003C950E /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 		DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 			children = (
 				DFAEA51227C1B7CE00428834 /* View+Extension.swift */,
 				DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */,
+				DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
 				DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */,
 				DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */,
+				DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */,
 				DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

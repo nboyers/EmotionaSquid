@@ -39,6 +39,7 @@ class AuthManager {
         
         auth.signIn(with: crediential) { result, error in
             guard result != nil, error == nil else {
+                print(error!.localizedDescription)
                 completion(false)
                 return
             }
