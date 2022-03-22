@@ -9,17 +9,15 @@ import SwiftUI
 
 struct SquidView: View {
     @State private var willViewSocialView = false
-    @State private var willMoveBack = false
+    @State private var  showStore = false
+    @State private var logoutPopup = false
     var body: some View {
         GeometryReader { geo in
             VStack {
                 HStack(alignment: .center) {
                     
                     Button(action: {
-                        withAnimation {
-                            self.willViewSocialView = true
-                        }
-                        
+                        willViewSocialView.toggle()
                     }) {
                         Image(systemName: "person.2.fill")
                     }
@@ -32,7 +30,7 @@ struct SquidView: View {
                     Spacer().frame(width: geo.size.width * 0.6)
                     
                     Button(action: {
-                        self.willViewSocialView.toggle()
+                        self.logoutPopup.toggle()
                     }) {
                         Image(systemName: "person.fill")
                     }
@@ -43,11 +41,6 @@ struct SquidView: View {
                     .cornerRadius(40)
                     
                 }
-                if willViewSocialView {
-                    FriendProfiles()
-                        .transition(.move(edge: .bottom))
-                }
-                
                 Spacer()
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
@@ -81,13 +74,17 @@ struct SquidView: View {
                 }
                 
                 Spacer()
-                Text("Store")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.pink)
-                    .multilineTextAlignment(.center)
-                
-                
+                Button("More Squids") {
+                    showStore.toggle()
+                }
+                .font(.title3)
+                .buttonStyle(GrowingButton())
+                .sheet(isPresented: $showStore) {
+                    StoreView()
+                }
+                .sheet(isPresented: $willViewSocialView){
+                    FriendProfiles()
+                }
                 Image(systemName: "arrow.down")
                     .renderingMode(.original)
                     .resizable()
@@ -97,8 +94,7 @@ struct SquidView: View {
             .navigationBarTitle("")
             .navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
-        }.navigate(to: FriendProfiles(), when: $willViewSocialView)
-        
+        }
     }
 }
 

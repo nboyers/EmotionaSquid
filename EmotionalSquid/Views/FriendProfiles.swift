@@ -17,7 +17,6 @@ struct FriendProfiles: View {
                     .multilineTextAlignment(.center)
                     .padding()
                 Divider()
-                Text("Search Bar").padding()
                 HStack {
                     Text("Add a new Friend")
                     Image(systemName: "arrow.right")

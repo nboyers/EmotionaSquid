@@ -19,7 +19,8 @@
 		DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E352527C2FC3F00763FFB /* SquidModel.swift */; };
 		DF1E352927C2FE2800763FFB /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = DF1E352827C2FE2800763FFB /* iPhoneNumberField */; };
 		DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */; };
-		DF61DB0727C9450C003C950E /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61DB0627C9450C003C950E /* Shopping.swift */; };
+		DF29D86727E94560006BECA0 /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29D86627E94560006BECA0 /* GrowingButton.swift */; };
+		DF61DB0727C9450C003C950E /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61DB0627C9450C003C950E /* StoreView.swift */; };
 		DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */; };
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
 		DF752C1C279E4962000922C6 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* NewUser.swift */; };
@@ -75,7 +76,8 @@
 		DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF1E352527C2FC3F00763FFB /* SquidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidModel.swift; sourceTree = "<group>"; };
 		DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
-		DF61DB0627C9450C003C950E /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		DF29D86627E94560006BECA0 /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
+		DF61DB0627C9450C003C950E /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalSquidApp.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		DF752C35279E4994000922C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF752C37279E4994000922C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF8DBA9127DD370B006AAF51 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; };
+		DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		DFAC5A1F27B213D80019A1B8 /* FriendProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfiles.swift; sourceTree = "<group>"; };
 		DFAEA51227C1B7CE00428834 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		DFC1825427E1790B003BF588 /* EmotionalSquid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionalSquid.entitlements; sourceTree = "<group>"; };
@@ -148,6 +150,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DF29D86027E93A55006BECA0 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		DF29D86527E94549006BECA0 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				DF29D86627E94560006BECA0 /* GrowingButton.swift */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
 		DF752C0D279E4962000922C6 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +191,7 @@
 				DFC1825427E1790B003BF588 /* EmotionalSquid.entitlements */,
 				DFEE1A8F27DD41EF0040A1D4 /* Info.plist */,
 				DF082F8227C5C3B900ACBFD8 /* Fonts */,
+				DF29D86527E94549006BECA0 /* Styling */,
 				DF18449927B4547D00AD07C5 /* Extensions */,
 				DF1E352427C2FC3100763FFB /* Model */,
 				DF8DBA9027DD33C9006AAF51 /* View Models */,
@@ -226,12 +244,13 @@
 		DFAC5A1B27B1E8580019A1B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DF29D86027E93A55006BECA0 /* Supporting Views */,
 				DF752C1B279E4962000922C6 /* NewUser.swift */,
 				DF18449727B44F8E00AD07C5 /* PhoneAuth.swift */,
 				DF18449A27B4577000AD07C5 /* Verification.swift */,
 				DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */,
 				DFAC5A1F27B213D80019A1B8 /* FriendProfiles.swift */,
-				DF61DB0627C9450C003C950E /* Shopping.swift */,
+				DF61DB0627C9450C003C950E /* StoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,8 +457,9 @@
 				DF18449B27B4577000AD07C5 /* Verification.swift in Sources */,
 				DF8DBA9227DD370B006AAF51 /* AuthManager.swift in Sources */,
 				DF752C39279E4994000922C6 /* ESWidget.intentdefinition in Sources */,
-				DF61DB0727C9450C003C950E /* Shopping.swift in Sources */,
+				DF61DB0727C9450C003C950E /* StoreView.swift in Sources */,
 				DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */,
+				DF29D86727E94560006BECA0 /* GrowingButton.swift in Sources */,
 				DFAC5A2027B213D80019A1B8 /* FriendProfiles.swift in Sources */,
 				DF752C1C279E4962000922C6 /* NewUser.swift in Sources */,
 				DF18449827B44F8E00AD07C5 /* PhoneAuth.swift in Sources */,

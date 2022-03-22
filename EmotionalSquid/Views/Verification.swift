@@ -63,8 +63,6 @@ struct Verification: View {
                 
                 Spacer()
                 Spacer()
-                //FIXME: This needs authentication & Disabled until user puts in correct SMS code
-                
                 Button(action: {
                     AuthManager.shared.verifyCode(smsCode: textCode) { success in
                         guard success else { return }
