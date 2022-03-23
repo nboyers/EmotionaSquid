@@ -37,6 +37,7 @@
 		DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1D27B1E8DB0019A1B8 /* SquidView.swift */; };
 		DFAC5A2027B213D80019A1B8 /* FriendProfiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC5A1F27B213D80019A1B8 /* FriendProfiles.swift */; };
 		DFAEA51327C1B7CE00428834 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAEA51227C1B7CE00428834 /* View+Extension.swift */; };
+		DFE686E327EAA32700D81A36 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE686E227EAA32700D81A36 /* InAppPurchases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		DFAC5A1F27B213D80019A1B8 /* FriendProfiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfiles.swift; sourceTree = "<group>"; };
 		DFAEA51227C1B7CE00428834 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		DFC1825427E1790B003BF588 /* EmotionalSquid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmotionalSquid.entitlements; sourceTree = "<group>"; };
+		DFE686E227EAA32700D81A36 /* InAppPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
+		DFE686E427EAA50E00D81A36 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		DFEE1A8F27DD41EF0040A1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F725E38FDC7F007C027F913C /* Pods-ESWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-ESWidgetExtension/Pods-ESWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8DBA9127DD370B006AAF51 /* AuthManager.swift */,
+				DFE686E227EAA32700D81A36 /* InAppPurchases.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -261,6 +265,7 @@
 				DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */,
 				DF752C1D279E4963000922C6 /* Assets.xcassets */,
 				DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */,
+				DFE686E427EAA50E00D81A36 /* Configuration.storekit */,
 			);
 			path = "Supporting Assets";
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				DF752C1C279E4962000922C6 /* NewUser.swift in Sources */,
 				DF18449827B44F8E00AD07C5 /* PhoneAuth.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
+				DFE686E327EAA32700D81A36 /* InAppPurchases.swift in Sources */,
 				DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */,
 				DFAC5A1E27B1E8DB0019A1B8 /* SquidView.swift in Sources */,
 				DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */,

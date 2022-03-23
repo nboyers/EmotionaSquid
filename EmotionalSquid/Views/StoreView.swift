@@ -7,27 +7,29 @@
 
 import SwiftUI
 
-struct StoreView: View {    
+struct StoreView: View {
+    @StateObject var storeController = InAppPurchases()
     var body: some View {
         GeometryReader { geo in
             VStack {
                 Spacer().frame(height: geo.size.height / 10)
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(0..<10) {_ in
-                            Button(action: {
-                                //FIXME: Make this do something
-                            }) {
-                                Image(systemName: "lock.fill")
-                                    .resizable()
-                                    .frame(width: geo.size.width / 6, height: geo.size.height / 8)
-                            }
-                            .frame(width: 200, height: 200)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.gray)
-                            .cornerRadius(100)
-                        }
+                        //TODO: Make the image model show up on views
+//                        ForEach(storeController.squidInfo, id: \.self) {
+//                            Button(action: {
+//                                storeController.purchase()
+//                            }) {
+//                                Image(systemName: "person")
+//                                    .resizable()
+//                                    .frame(width: geo.size.width / 6, height: geo.size.height / 8)
+//                            }
+//                            .frame(width: 200, height: 200)
+//                            .padding()
+//                            .foregroundColor(.white)
+//                            .background(Color.gray)
+//                            .cornerRadius(100)
+//                        }
                     }
                 }
                 
@@ -43,6 +45,8 @@ struct StoreView: View {
                     }
                 }
             }
+        }.onAppear {
+            storeController.fetchProducts()
         }
     }
 }

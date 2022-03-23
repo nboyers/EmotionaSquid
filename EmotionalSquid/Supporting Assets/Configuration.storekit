@@ -1,0 +1,78 @@
+{
+  "identifier" : "B412C0FD",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "CF97CFAE",
+      "localizations" : [
+        {
+          "description" : "Test1Test1Test1Test1Test",
+          "displayName" : "Test1Test1Test1Test1Test1",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id.Test1",
+      "referenceName" : "Test1",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "4E047391",
+      "localizations" : [
+        {
+          "description" : "Test2Test2Test2Test2",
+          "displayName" : "Test2",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id.Test2",
+      "referenceName" : "Test2",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "619CF927",
+      "localizations" : [
+        {
+          "description" : "Test3Test3Test3Test3Test3",
+          "displayName" : "Test3",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id.Test3",
+      "referenceName" : "Test3",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "0F2A6A7F",
+      "localizations" : [
+        {
+          "description" : "Test3Test3Test3Test3",
+          "displayName" : "Test3",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id.Test3",
+      "referenceName" : "Test4",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 2
+  }
+}
