@@ -8,46 +8,36 @@
 import SwiftUI
 
 struct StoreView: View {
-    @StateObject var storeController = InAppPurchases()
+    @ObservedObject var storeController = InAppPurchases()
+    var squid = [
+        SquidModel(imageName: "HappySquid", color: "red",productID: "com.temporary.id.HappySquid"),
+        SquidModel(imageName: "AngrySquid", color: "green", productID:  "com.temporary.id.AngrySquid"),
+        SquidModel(imageName: "KingSquid", color: "blue", productID:  "com.temporary.id.KingSquid"),
+    ]
+    
     var body: some View {
-        GeometryReader { geo in
+        GeometryReader {geo in
             VStack {
-                Spacer().frame(height: geo.size.height / 10)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        //TODO: Make the image model show up on views
-//                        ForEach(storeController.squidInfo, id: \.self) {
-//                            Button(action: {
-//                                storeController.purchase()
-//                            }) {
-//                                Image(systemName: "person")
-//                                    .resizable()
-//                                    .frame(width: geo.size.width / 6, height: geo.size.height / 8)
-//                            }
-//                            .frame(width: 200, height: 200)
-//                            .padding()
-//                            .foregroundColor(.white)
-//                            .background(Color.gray)
-//                            .cornerRadius(100)
-//                        }
-                    }
-                }
-                
-                Spacer().frame(height: 75)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(0..<10) {_ in
-                            Image(systemName: "circle.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundColor(.teal)
+                Spacer()
+                    .frame(height: geo.size.height / 10)
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack(spacing: 50) {
+                        ForEach(squid) { squid in
+                            Button {
+                                storeController.purchase()
+                            } label: {
+                                Image(squid.imageName)
+                                    .resizable()
+                                    .frame(width: geo.size.width / 4, height: geo.size.height / 8)
+                            }
                         }
                     }
-                }
+                }  .onAppear { storeController.fetchProducts() }
+                
             }
-        }.onAppear {
-            storeController.fetchProducts()
+            
         }
+        
     }
 }
 

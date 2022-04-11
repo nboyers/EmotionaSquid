@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		06347712C40E41B2B489B60F /* Pods_ESWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580D2F831863A91A20AC820A /* Pods_ESWidgetExtension.framework */; };
 		A2BA660A30678FA554B6523F /* Pods_EmotionalSquid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1844CD14EA8A3A13BC587EFB /* Pods_EmotionalSquid.framework */; };
-		DF082F8427C5C3F800ACBFD8 /* BoldLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */; };
-		DF082F8527C5C3F800ACBFD8 /* BoldLove.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */; };
+		DF0D2D362803AB9F0024DF7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0D2D352803AB9F0024DF7C /* GoogleService-Info.plist */; };
+		DF0D2D372803AB9F0024DF7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0D2D352803AB9F0024DF7C /* GoogleService-Info.plist */; };
 		DF18449627B44E8900AD07C5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF18449527B44E8900AD07C5 /* StoreKit.framework */; };
 		DF18449827B44F8E00AD07C5 /* PhoneAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449727B44F8E00AD07C5 /* PhoneAuth.swift */; };
 		DF18449B27B4577000AD07C5 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF18449A27B4577000AD07C5 /* Verification.swift */; };
-		DF18449D27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
-		DF18449E27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */; };
 		DF1E352627C2FC3F00763FFB /* SquidModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E352527C2FC3F00763FFB /* SquidModel.swift */; };
 		DF1E352927C2FE2800763FFB /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = DF1E352827C2FE2800763FFB /* iPhoneNumberField */; };
 		DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */; };
@@ -70,11 +68,10 @@
 		B3277B357DF654D15CC8A6DB /* Pods-ESWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-ESWidgetExtension/Pods-ESWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 		B786ADC8E34B5EA025C0B5DC /* Pods-EmotionalSquid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalSquid.release.xcconfig"; path = "Target Support Files/Pods-EmotionalSquid/Pods-EmotionalSquid.release.xcconfig"; sourceTree = "<group>"; };
 		D34894CE7D9560C9D689073D /* Pods-EmotionalSquid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmotionalSquid.debug.xcconfig"; path = "Target Support Files/Pods-EmotionalSquid/Pods-EmotionalSquid.debug.xcconfig"; sourceTree = "<group>"; };
-		DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BoldLove.ttf; path = "../../../../../../Downloads/bold-love/BoldLove.ttf"; sourceTree = "<group>"; };
+		DF0D2D352803AB9F0024DF7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "EmotionalSquid/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DF18449527B44E8900AD07C5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DF18449727B44F8E00AD07C5 /* PhoneAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuth.swift; sourceTree = "<group>"; };
 		DF18449A27B4577000AD07C5 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
-		DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF1E352527C2FC3F00763FFB /* SquidModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidModel.swift; sourceTree = "<group>"; };
 		DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		DF29D86627E94560006BECA0 /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		DF082F8227C5C3B900ACBFD8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				DF082F8327C5C3F800ACBFD8 /* BoldLove.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -262,9 +258,9 @@
 		DFAC5A1C27B1E8640019A1B8 /* Supporting Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DF0D2D352803AB9F0024DF7C /* GoogleService-Info.plist */,
 				DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */,
 				DF752C1D279E4963000922C6 /* Assets.xcassets */,
-				DF18449C27B460CC00AD07C5 /* GoogleService-Info.plist */,
 				DFE686E427EAA50E00D81A36 /* Configuration.storekit */,
 			);
 			path = "Supporting Assets";
@@ -372,9 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF752C21279E4963000922C6 /* Preview Assets.xcassets in Resources */,
+				DF0D2D362803AB9F0024DF7C /* GoogleService-Info.plist in Resources */,
 				DF752C1E279E4963000922C6 /* Assets.xcassets in Resources */,
-				DF082F8427C5C3F800ACBFD8 /* BoldLove.ttf in Resources */,
-				DF18449D27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +377,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF082F8527C5C3F800ACBFD8 /* BoldLove.ttf in Resources */,
 				DF752C36279E4994000922C6 /* Assets.xcassets in Resources */,
-				DF18449E27B460CC00AD07C5 /* GoogleService-Info.plist in Resources */,
+				DF0D2D372803AB9F0024DF7C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

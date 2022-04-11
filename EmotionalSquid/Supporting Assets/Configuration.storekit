@@ -16,7 +16,7 @@
         }
       ],
       "productID" : "com.temporary.id.Test1",
-      "referenceName" : "Test1",
+      "referenceName" : "HappySquid",
       "type" : "NonConsumable"
     },
     {
@@ -31,7 +31,7 @@
         }
       ],
       "productID" : "com.temporary.id.Test2",
-      "referenceName" : "Test2",
+      "referenceName" : "AngrySquid",
       "type" : "NonConsumable"
     },
     {
@@ -46,7 +46,7 @@
         }
       ],
       "productID" : "com.temporary.id.Test3",
-      "referenceName" : "Test3",
+      "referenceName" : "KingSquid",
       "type" : "NonConsumable"
     },
     {

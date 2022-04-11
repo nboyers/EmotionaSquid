@@ -11,15 +11,23 @@ class InAppPurchases: UIViewController, ObservableObject  {
     
     @Published var products: [Product] = []
     @Published var purchasedID: [String] = []
-    @Published var squidInfo = SQUID()
+    var squid = [
+        SquidModel(imageName: "HappySquid", color: "red",productID: "com.temporary.id.HappySquid"),
+        SquidModel(imageName: "AngrySquid", color: "green", productID:  "com.temporary.id.AngrySquid"),
+        SquidModel(imageName: "KingSquid", color: "blue", productID:  "com.temporary.id.KingSquid"),
+    ]
+    
     
     func fetchProducts() {
         Task {
             do {
-                let products = try await Product.products(for: ["com.temporary.id.Test1",
-                                                                "com.temporary.id.Test2",
-                                                                "com.temporary.id.Test3",
-                                                                "com.temporary.id.Test4"])
+                let products = try await Product.products(for: [
+                    // LOOKING FOR STRINGS
+
+                    "com.temporary.id.HappySquid",
+                    "com.temporary.id.AngrySquid",
+                    "com.temporary.id.KingSquid"
+                ])
                 
                 DispatchQueue.main.async {
                     self.products = products
@@ -75,7 +83,7 @@ class InAppPurchases: UIViewController, ObservableObject  {
                         break
                         
                     case .unverified:
-                        break
+                        return
                     }
                 case .userCancelled, .pending:
                     break

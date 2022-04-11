@@ -8,18 +8,12 @@
 import Foundation
 
 
-struct SquidModel: Identifiable, Codable {
+struct SquidModel: Identifiable {
     var id = UUID()
     let imageName: String
     let color: String
+    let productID: String
 }
 
 
-struct SQUID {
-    let squid = [
-        SquidModel(imageName: "kingsquid", color: "red"),
-        SquidModel(imageName: "kingsquid", color: "green"),
-        SquidModel(imageName: "kingsquid", color: "blue"),
-        SquidModel(imageName: "kingsquid", color: "purple"),
-    ]
-}
+
