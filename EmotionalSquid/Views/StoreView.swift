@@ -9,12 +9,7 @@ import SwiftUI
 
 struct StoreView: View {
     @ObservedObject var storeController = InAppPurchases()
-    var squid = [
-        SquidModel(imageName: "HappySquid", color: "red",productID: "com.temporary.id.HappySquid"),
-        SquidModel(imageName: "AngrySquid", color: "green", productID:  "com.temporary.id.AngrySquid"),
-        SquidModel(imageName: "KingSquid", color: "blue", productID:  "com.temporary.id.KingSquid"),
-    ]
-    
+
     var body: some View {
         GeometryReader {geo in
             VStack {
@@ -22,7 +17,7 @@ struct StoreView: View {
                     .frame(height: geo.size.height / 10)
                 ScrollView(.horizontal, showsIndicators: true) {
                     HStack(spacing: 50) {
-                        ForEach(squid) { squid in
+                        ForEach(storeController.squid) { squid in
                             Button {
                                 storeController.purchase()
                             } label: {

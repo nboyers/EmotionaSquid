@@ -10,7 +10,7 @@ import Foundation
 
 struct SquidModel: Identifiable {
     var id = UUID()
-    let imageName: String
+    var imageName: String
     let color: String
     let productID: String
 }
