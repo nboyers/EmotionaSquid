@@ -57,6 +57,7 @@ struct SocialSign: View {
 
 struct SquidChoice: View {
     @StateObject var storeController = InAppPurchases()
+    private let Widget = WidgetController()
     @State var sendSquid = false
     @ViewBuilder private var lockedImageOverlay: some View {
         GeometryReader { geo in
@@ -78,13 +79,12 @@ struct SquidChoice: View {
                 HStack(spacing: 25) {
                     ForEach(storeController.squid) { squid in
                         Button {
-                            //FIXME: Button to send to send to other    phone's widget
-                            sendSquid.toggle()
+                            Widget.didPressButton(SQUID_NAME: squid.imageName)
                         } label: {
                             Image(squid.imageName)
                                 .resizable()
                                 .frame(width: geo.size.width * 0.75, height: geo.size.height * 0.75)
-                        }  .overlay(lockedImageOverlay)
+                        }  //.overlay(lockedImageOverlay)
                     }
                 }
             }  .onAppear { storeController.fetchProducts() }

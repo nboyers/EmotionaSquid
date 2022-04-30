@@ -19,6 +19,7 @@
 		DF231B0F27E6D3330028088C /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */; };
 		DF29D86727E94560006BECA0 /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF29D86627E94560006BECA0 /* GrowingButton.swift */; };
 		DF61DB0727C9450C003C950E /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61DB0627C9450C003C950E /* StoreView.swift */; };
+		DF62DDFB281DAB6D00064801 /* WidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF62DDFA281DAB6D00064801 /* WidgetController.swift */; };
 		DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */; };
 		DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */; };
 		DF752C1C279E4962000922C6 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF752C1B279E4962000922C6 /* NewUser.swift */; };
@@ -76,6 +77,8 @@
 		DF231B0E27E6D3330028088C /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		DF29D86627E94560006BECA0 /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
 		DF61DB0627C9450C003C950E /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		DF62DDFA281DAB6D00064801 /* WidgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetController.swift; sourceTree = "<group>"; };
+		DF62DDFC281DAF1C00064801 /* ESWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ESWidgetExtension.entitlements; sourceTree = "<group>"; };
 		DF66C53B27C5BE5A00837DEE /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		DF752C16279E4962000922C6 /* EmotionalSquid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotionalSquid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF752C19279E4962000922C6 /* EmotionalSquidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalSquidApp.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		DF752C0D279E4962000922C6 = {
 			isa = PBXGroup;
 			children = (
+				DF62DDFC281DAF1C00064801 /* ESWidgetExtension.entitlements */,
 				DF752C18279E4962000922C6 /* EmotionalSquid */,
 				DF752C31279E4993000922C6 /* ESWidget */,
 				DF752C2C279E4993000922C6 /* Frameworks */,
@@ -237,6 +241,7 @@
 			children = (
 				DF8DBA9127DD370B006AAF51 /* AuthManager.swift */,
 				DFE686E227EAA32700D81A36 /* InAppPurchases.swift */,
+				DF62DDFA281DAB6D00064801 /* WidgetController.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				DFAC5A2027B213D80019A1B8 /* FriendProfiles.swift in Sources */,
 				DF752C1C279E4962000922C6 /* NewUser.swift in Sources */,
 				DF18449827B44F8E00AD07C5 /* PhoneAuth.swift in Sources */,
+				DF62DDFB281DAB6D00064801 /* WidgetController.swift in Sources */,
 				DF752C1A279E4962000922C6 /* EmotionalSquidApp.swift in Sources */,
 				DFE686E327EAA32700D81A36 /* InAppPurchases.swift in Sources */,
 				DF66C53C27C5BE5A00837DEE /* Colors+Extension.swift in Sources */,
@@ -745,6 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JCL982F3T2;
@@ -773,6 +780,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ESWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JCL982F3T2;
